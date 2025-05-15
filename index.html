@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Your Name. Course home page showcasing web development skills using HTML, CSS, and JavaScript.">
-    <meta name="author" content="Your Name">
-    <title>WDD 131 - Dynamic Web Fundamentals - Your Name</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Carlos Roberto Silva. Martial arts professional and web development student sharing his journey and resources.">
+    <meta name="author" content="Carlos Roberto Silva">
+    <title>WDD 131 - Dynamic Web Fundamentals - Carlos Roberto Silva</title>
     <link rel="stylesheet" href="styles/base.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,43 +14,44 @@
 </head>
 <body>
     <header>
-        <h1>WDD 131: Dynamic Web Fundamentals</h1>
+        <h1>WDD 131: Dynamic Web Fundamentals - Carlos Roberto Silva</h1>
         <nav>
             <ul>
-                <li><a href="https://www.linkedin.com/in/yourprofile/" target="_blank">LinkedIn</a></li>
-                <li><a href="https://byupw.instructure.com/" target="_blank">Canvas</a></li>
-                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng" target="_blank">Scripture</a></li>
-                <li><a href="#" target="_blank">Final Project</a></li>
+                <li><a href="https://www.linkedin.com/in/carlosrobertosilva" aria-label="LinkedIn profile">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/" aria-label="BYU-Pathway Canvas">Canvas</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng" aria-label="Favorite Scripture">Scripture</a></li>
+                <li><a href="#" aria-label="Final Project (coming soon)">Final Project</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="card">
-            <h2>About Me</h2>
+        <section class="card" aria-labelledby="about-heading">
+            <h2 id="about-heading">About Me</h2>
             <div class="card-content">
-                <p>My name is Your Name and I'm from Your Location. I enjoy web development and learning new technologies. This course is helping me strengthen my skills in HTML, CSS, and JavaScript.</p>
-                <img src="images/your-photo.jpg" alt="Your Name" width="150">
+                <p>My name is Carlos Roberto Silva, and I go by Carlos or Grandmaster Silva. I was born in João Pessoa, Paraiba, Brazil and I lived there until I was 42 years old. I am currently working as a Teacher at John F Kennedy Junior High School as a CTE teacher and I am ISKA Latin America Director of Operations, based in Orlando Florida State, USA, working with fighting events all over Caribbean, Central and South America. I love to travel for this company making professional fights for living. Martial Arts is part of my Life, and I practiced it for more than 40 years.</p>
+                <img src="images/profile.jpg" alt="Carlos Roberto Silva portrait" width="150" height="150" loading="lazy">
             </div>
-            <h3>Your Country/State</h3>
+            <h3>João Pessoa, Paraiba, Brazil</h3>
             <hr>
             <div class="country-info">
-                <img src="images/your-country-flag.jpg" alt="Flag of Your Country" width="200">
-                <p>Interesting fact about your country or state.</p>
+                <img src="images/paraiba-flag.jpg" alt="Official Flag of Paraiba State, Brazil" width="200" height="133" loading="lazy">
+                <p>João Pessoa is a coastal city near the mouth of the Paraíba River in eastern Brazil. Its old town is known for its baroque and art nouveau architecture. The 16th-century São Francisco Church has Portuguese painted tiles in its courtyard and an ornate, gold-adorned chapel. Tambaú and Cabo Branco beaches are lined with bars and nightclubs, plus shops selling local woodcarvings and pottery. João Pessoa is a Paradise, covered with trees, flowers and amazing green sea and delicious culinary and beautiful culture.</p>
             </div>
         </section>
-        <section class="card">
-            <h2>Web Dev Resources</h2>
+        <section class="card" aria-labelledby="resources-heading">
+            <h2 id="resources-heading">Web Development Resources</h2>
             <ul class="resources">
-                <li><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a></li>
-                <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
-                <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a></li>
-                <li><a href="https://codepen.io/" target="_blank">CodePen</a></li>
-                <li><a href="https://web.dev/" target="_blank">web.dev</a></li>
+                <li><a href="https://dev.to/" target="_blank" rel="noopener">Dev.to Community</a> - Development community</li>
+                <li><a href="https://www.smashingmagazine.com/" target="_blank" rel="noopener">Smashing Magazine</a> - Web design and development</li>
+                <li><a href="https://css-tricks.com/" target="_blank" rel="noopener">CSS Tricks</a> - Advanced CSS techniques</li>
+                <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener">W3 Schools</a> - Beginner-friendly tutorials</li>
+                <li><a href="https://www.udemy.com/" target="_blank" rel="noopener">Udemy</a> - Online courses</li>
+                <li><a href="https://placeholder.com/" target="_blank" rel="noopener">Image Placeholder</a> - Temporary images</li>
             </ul>
         </section>
     </main>
     <footer>
-        <p>&copy;<span id="currentyear"></span> Your Name - Your Location</p>
+        <p>&copy;<span id="currentyear"></span> Carlos Roberto Silva • João Pessoa, Paraiba, Brazil</p>
         <p id="lastModified"></p>
     </footer>
 </body>
