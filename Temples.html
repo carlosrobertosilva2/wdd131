@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temple Album</title>
+  <link rel="stylesheet" href="styles/temples.css">
+  <link rel="stylesheet" href="styles/temples-large.css" media="(min-width: 768px)">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway&display=swap" rel="stylesheet">
+  <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Temple Album</h1>
+    <button id="hamburgerBtn">☰</button>
+    <nav id="primaryNav">
+      <a href="index.html">Home</a>
+      <a href="#">Old</a>
+      <a href="#">New</a>
+      <a href="#">Large</a>
+      <a href="#">Small</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Sacred Spaces</h2>
+    <div class="temple-grid">
+      <!-- Repeat 9x (use real temple names) -->
+      <figure>
+        <img src="images/salt-lake-temple.jpg" alt="Salt Lake Temple" loading="lazy">
+        <figcaption>Salt Lake Temple</figcaption>
+      </figure>
+      <!-- Add 8 more figures -->
+    </div>
+  </main>
+
+  <footer>
+    <p>© <span id="currentYear"></span> | Your Name | Last Modified: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>
