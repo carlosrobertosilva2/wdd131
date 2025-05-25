@@ -1,0 +1,9 @@
+wdd131/
+├── index.html
+├── styles/
+│   └── base.css
+├── scripts/
+│   └── getdates.js
+└── images/
+    ├── your-photo.jpg (or .png)
+    └── other-images.jpg
