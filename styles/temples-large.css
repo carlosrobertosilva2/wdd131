@@ -1,0 +1,14 @@
+@media (min-width: 768px) {
+  #hamburgerBtn {
+    display: none;
+  }
+
+  #primaryNav {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .temple-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
