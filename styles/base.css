@@ -1,4 +1,3 @@
-/* Base Styles */
 :root {
     --primary-color: #396e94;
     --secondary-color: #e7c24f;
@@ -150,7 +149,6 @@ hr {
     background-color: #ddd;
 }
 
-/* Media Queries */
 @media (min-width: 768px) {
     main {
         grid-template-columns: 1fr 1fr;
