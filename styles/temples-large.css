@@ -1,33 +1,4 @@
-#hamburgerBtn {
-    display: none;
-}
-
-nav {
-    display: flex !important;
-    flex-direction: row;
-    justify-content: center;
-    gap: 2rem;
-}
-
-nav a {
-    padding: 0.75rem 1.5rem;
-    font-size: 1.1rem;
-}
-
-.temple-grid {
-    grid-template-columns: repeat(2, 1fr);
-}
-
-@media (min-width: 1024px) {
-    .temple-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    
-    main {
-        padding: 0 2rem;
-    }
-    
-    figure img {
-        height: 300px;
-    }
+@media (min-width: 768px) {
+    /* Optional: Add any desktop-specific adjustments here */
+    /* Currently matches the mobile styles exactly */
 }
