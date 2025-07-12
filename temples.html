@@ -4,17 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temple Album</title>
-    <meta name="description" content="A collection of beautiful temple pictures from around the world">
-    <link rel="stylesheet" href="styles/temples.css">
-    <link rel="stylesheet" href="styles/temples-large.css" media="(min-width: 768px)">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
-    <script src="scripts/temples.js" defer></script>
+    <style>
+        /* Light Blue Frame for entire page */
+        body {
+            border: 15px solid lightblue;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+        
+        /* 3x Larger Main Titles */
+        h1 {
+            font-size: 3em;
+            margin: 0.5em 0;
+        }
+        
+        h2 {
+            font-size: 2.5em;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        /* Horizontal Image Blocks Container */
+        .horizontal-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px auto;
+            max-width: 1200px;
+        }
+        
+        /* Individual Temple Block */
+        .temple-block {
+            background-color: darkblue;
+            padding: 15px;
+            border-radius: 8px;
+            flex: 0 0 300px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .temple-block img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border: 3px solid white;
+            border-radius: 4px;
+        }
+        
+        .temple-name {
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            padding: 10px 0;
+            font-size: 1.2em;
+            margin-top: auto;
+        }
+        
+        /* Original styling */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 15px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: #555;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Temple Album</h1>
-        <button id="hamburgerBtn">☰</button>
-        <nav id="primaryNav">
+        <nav>
             <a href="index.html">Home</a>
             <a href="#">Old</a>
             <a href="#">New</a>
@@ -25,12 +114,64 @@
 
     <main>
         <h2>Sacred Temples Around the World</h2>
-        <div class="temple-grid">
+        
+        <div class="horizontal-gallery">
+            <!-- Row 1 -->
+            <div class="temple-block">
+                <img src="images/salt-lake-temple.webp" alt="Salt Lake Temple">
+                <div class="temple-name">Salt Lake Temple</div>
+            </div>
+            
+            <div class="temple-block">
+                <img src="images/rome-temple.webp" alt="Rome Italy Temple">
+                <div class="temple-name">Rome Italy Temple</div>
+            </div>
+            
+            <div class="temple-block">
+                <img src="images/washington-temple.webp" alt="Washington D.C. Temple">
+                <div class="temple-name">Washington D.C. Temple</div>
+            </div>
+            
+            <!-- Row 2 -->
+            <div class="temple-block">
+                <img src="images/sao-paulo-temple.webp" alt="São Paulo Brazil Temple">
+                <div class="temple-name">São Paulo Brazil Temple</div>
+            </div>
+            
+            <div class="temple-block">
+                <img src="images/tokyo-temple.webp" alt="Tokyo Japan Temple">
+                <div class="temple-name">Tokyo Japan Temple</div>
+            </div>
+            
+            <div class="temple-block">
+                <img src="images/paris-temple.webp" alt="Paris France Temple">
+                <div class="temple-name">Paris France Temple</div>
+            </div>
+            
+            <!-- Row 3 -->
+            <div class="temple-block">
+                <img src="images/hong-kong-temple.webp" alt="Hong Kong China Temple">
+                <div class="temple-name">Hong Kong China Temple</div>
+            </div>
+            
+            <div class="temple-block">
+                <img src="images/johannesburg-temple.webp" alt="Johannesburg South Africa Temple">
+                <div class="temple-name">Johannesburg South Africa Temple</div>
+            </div>
+            
+            <div class="temple-block">
+                <img src="images/sydney-temple.webp" alt="Sydney Australia Temple">
+                <div class="temple-name">Sydney Australia Temple</div>
+            </div>
         </div>
     </main>
 
     <footer>
-        <p>© <span id="currentYear"></span> | Carlos Roberto Silva | Last Modified: <span id="lastModified"></span></p>
+        <p>&copy; <span id="currentyear"></span> | Temple Album Project</p>
     </footer>
+
+    <script>
+        document.getElementById('currentyear').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
