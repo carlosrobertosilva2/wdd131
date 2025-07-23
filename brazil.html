@@ -3,70 +3,62 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Explore Brazil's vibrant culture, stunning landscapes, and tropical weather">
-  <meta name="author" content="Carlos Silva">
-  <title>Brazil | Land of Natural Wonders</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/brazil.css">
-  <script src="scripts/brazil.js" defer></script>
+  <title>Brazil | Tropical Paradise</title>
+  <style>
+    /* INLINE STYLES FOR IMMEDIATE VISIBILITY */
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #f0f8ff; /* Light blue background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .blue-frame {
+      background: white;
+      border: 10px solid #add8e6; /* Light blue frame */
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 1000px;
+      width: 90%;
+      box-shadow: 0 0 25px rgba(173, 216, 230, 0.7);
+    }
+    h1 {
+      color: #0066cc;
+      margin: 20px 0;
+    }
+    p {
+      margin: 15px auto;
+      max-width: 700px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+      border: 3px solid #add8e6;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body>
-  <div class="page-frame">
-    <header>
-      <!-- Hero image with responsive srcset -->
-      <picture>
-        <source srcset="https://images.unsplash.com/photo-1544989164-31f6a2a31773?w=600&auto=format&fit=crop 600w, 
-                       https://images.unsplash.com/photo-1544989164-31f6a2a31773?w=1200&auto=format&fit=crop 1200w" 
-                sizes="(max-width: 600px) 600px, (max-width: 1200px) 1200px">
-        <img src="AmazonForrest.jpg" 
-             alt="Aerial view of Amazon rainforest and river in Brazil" 
-             width="1600" height="900">
-      </picture>
-      <div class="title-frame">
-        <h1>Discover Beautiful Brazil</h1>
-      </div>
-    </header>
-
-    <nav class="nav-frame">
-      <ul>
-        <li><a href="#about">About Brazil</a></li>
-        <li><a href="#attractions">Top Attractions</a></li>
-        <li><a href="#weather">Weather</a></li>
-      </ul>
-    </nav>
-
-    <main class="main-content">
-      <section id="about" class="content-section">
-        <div class="section-frame">
-          <h2>About Brazil</h2>
-          <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=800&auto=format&fit=crop" 
-               alt="Christ the Redeemer statue in Rio de Janeiro" 
-               class="content-image">
-          <p>Brazil, the largest country in South America, is famous for its Carnival festival, Amazon rainforest, and beautiful beaches. With vibrant cities like Rio de Janeiro and São Paulo, Brazil offers a rich cultural experience.</p>
-        </div>
-      </section>
-
-      <section id="weather" class="weather-section">
-        <div class="section-frame">
-          <h2>Brazilian Weather</h2>
-          <div class="weather-container">
-            <div class="weather-icon-mobile"></div>
-            <div class="weather-data">
-              <p>Temperature: <span id="temperature">82</span>°F</p>
-              <p>Wind Speed: <span id="wind-speed">8</span> mph</p>
-              <p>Wind Chill: <span id="wind-chill"></span></p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="footer-frame">
-        <p>&copy;<span id="current-year"></span> Brazilian Tourism Board</p>
-        <p>Last Updated: <span id="last-modified"></span></p>
-      </div>
-    </footer>
+  <div class="blue-frame">
+    <h1>Welcome to Brazil</h1>
+    <p>The land of vibrant carnivals, Amazon rainforests, and beautiful beaches</p>
+    
+    <img src="https://example.com/brazil-beach.jpg" alt="Brazilian beach with palm trees" width="800" height="450">
+    
+    <p>Brazil is the largest country in South America, known for its diverse culture and natural wonders.</p>
+    <p>From the Amazon River to Christ the Redeemer, Brazil offers unforgettable experiences.</p>
+    
+    <div style="margin: 30px 0;">
+      <a href="#about" style="margin: 0 15px; color: #0066cc; text-decoration: none;">About</a>
+      <a href="#attractions" style="margin: 0 15px; color: #0066cc; text-decoration: none;">Attractions</a>
+      <a href="#weather" style="margin: 0 15px; color: #0066cc; text-decoration: none;">Weather</a>
+    </div>
   </div>
 </body>
 </html>
