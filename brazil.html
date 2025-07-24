@@ -3,62 +3,111 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Brazil | Tropical Paradise</title>
+  <title>Brazil | Natural Wonders</title>
   <style>
-    /* INLINE STYLES FOR IMMEDIATE VISIBILITY */
+    /* LIGHT BLUE FRAME */
     body {
+      background-color: #E6F2FF;
       margin: 0;
       padding: 20px;
-      background: #f0f8ff; /* Light blue background */
+      min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
       font-family: Arial, sans-serif;
+    }
+    
+    .web-frame {
+      border: 15px solid #ADD8E6;
+      border-radius: 25px;
+      background-color: white;
+      width: 90%;
+      max-width: 1000px;
+      padding: 40px;
+      box-shadow: 0 0 30px rgba(173, 216, 230, 0.8);
       text-align: center;
     }
-    .blue-frame {
-      background: white;
-      border: 10px solid #add8e6; /* Light blue frame */
-      border-radius: 15px;
-      padding: 30px;
-      max-width: 1000px;
-      width: 90%;
-      box-shadow: 0 0 25px rgba(173, 216, 230, 0.7);
+    
+    /* PERFECTLY CENTERED CONTENT WITH ALIGNED BULLETS */
+    h1, h2, p {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      max-width: 800px;
     }
-    h1 {
-      color: #0066cc;
-      margin: 20px 0;
-    }
-    p {
-      margin: 15px auto;
-      max-width: 700px;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
+    
+    /* FIXED BULLET POINT ALIGNMENT */
+    nav ul {
+      display: inline-block;
+      text-align: left;
+      padding-left: 20px;
       margin: 20px auto;
-      border: 3px solid #add8e6;
-      border-radius: 10px;
     }
+    
+    /* IMAGE GALLERY */
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin: 30px 0;
+    }
+    
+    .image-gallery img {
+      width: 100%;
+      max-width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 3px solid #ADD8E6;
+    }
+    
+    /* REST OF THE STYLES... */
   </style>
 </head>
 <body>
-  <div class="blue-frame">
-    <h1>Welcome to Brazil</h1>
-    <p>The land of vibrant carnivals, Amazon rainforests, and beautiful beaches</p>
+  <div class="web-frame">
+    <h1>BRAZIL'S DIVERSE LANDSCAPES</h1>
     
-    <img src="https://example.com/brazil-beach.jpg" alt="Brazilian beach with palm trees" width="800" height="450">
-    
-    <p>Brazil is the largest country in South America, known for its diverse culture and natural wonders.</p>
-    <p>From the Amazon River to Christ the Redeemer, Brazil offers unforgettable experiences.</p>
-    
-    <div style="margin: 30px 0;">
-      <a href="#about" style="margin: 0 15px; color: #0066cc; text-decoration: none;">About</a>
-      <a href="#attractions" style="margin: 0 15px; color: #0066cc; text-decoration: none;">Attractions</a>
-      <a href="#weather" style="margin: 0 15px; color: #0066cc; text-decoration: none;">Weather</a>
+    <!-- Image Gallery with Requested Pictures -->
+    <div class="image-gallery">
+      <!-- 1. Christ the Redeemer (Kept as first picture) -->
+      <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+           alt="Christ the Redeemer statue in Rio de Janeiro">
+      
+      <!-- 2. Aerial view of Amazon jungle -->
+      <img src="https://images.unsplash.com/photo-1619546813926-a78fa6372cd2?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+           alt="Aerial view of Amazon rainforest">
+      
+      <!-- 3. São Paulo aerial view -->
+      <img src="https://images.unsplash.com/photo-1551590192-8070a16d9f67?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+           alt="Aerial view of São Paulo city">
     </div>
+    
+    <!-- Navigation with Aligned Bullets -->
+    <nav>
+      <ul>
+        <li><a href="#rio">Rio de Janeiro</a></li>
+        <li><a href="#amazon">Amazon Jungle</a></li>
+        <li><a href="#saopaulo">São Paulo</a></li>
+        <li><a href="#weather">Weather</a></li>
+      </ul>
+    </nav>
+    
+    <div class="weather-box">
+      <h2>Current Weather</h2>
+      <p>Temperature: 82°F</p>
+      <p>Wind Speed: 8 mph</p>
+      <p>Wind Chill: N/A</p>
+    </div>
+    
+    <footer>
+      <p>&copy; <span id="current-year">2023</span> Brazil Tourism</p>
+    </footer>
   </div>
+
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
