@@ -55,13 +55,27 @@
             border-radius: 4px;
         }
         
-        .temple-name {
+        .temple-info {
             color: white;
-            text-align: center;
-            font-weight: bold;
             padding: 10px 0;
-            font-size: 1.2em;
             margin-top: auto;
+            text-align: center; /* Center all text */
+        }
+        
+        .temple-name {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 8px;
+        }
+        
+        .temple-details {
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        
+        .temple-details p {
+            margin: 5px 0;
+            text-align: center; /* Ensure paragraphs are centered */
         }
         
         /* Light purple header/footer */
@@ -85,6 +99,7 @@
             padding: 5px 10px;
             border-radius: 4px;
             transition: background-color 0.3s;
+            cursor: pointer;
         }
         
         nav a:hover {
@@ -104,74 +119,183 @@
     <header>
         <h1>Temple Album</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="#">Old</a>
-            <a href="#">New</a>
-            <a href="#">Large</a>
-            <a href="#">Small</a>
+            <a id="home">Home</a>
+            <a id="old">Old</a>
+            <a id="new">New</a>
+            <a id="large">Large</a>
+            <a id="small">Small</a>
         </nav>
     </header>
 
     <main>
         <h2>Sacred Temples Around the World</h2>
         
-        <div class="horizontal-gallery">
-            <!-- Row 1 -->
-            <div class="temple-block">
-                <img src="images/Salt-Lake-City-Temple.jpg" alt="Salt Lake Temple">
-                <div class="temple-name">Salt Lake Temple</div>
-            </div>
-            
-            <div class="temple-block">
-                <img src="images/Rome-Italy-Temple.jpg" alt="Rome Italy Temple">
-                <div class="temple-name">Rome Italy Temple</div>
-            </div>
-            
-            <div class="temple-block">
-                <img src="images/Washington-D.C.-Temple.jpg" alt="Washington D.C. Temple">
-                <div class="temple-name">Washington D.C. Temple</div>
-            </div>
-            
-            <!-- Row 2 -->
-            <div class="temple-block">
-                <img src="images/Sao-Paulo-Brazil-Temple.jpg" alt="São Paulo Brazil Temple">
-                <div class="temple-name">São Paulo Brazil Temple</div>
-            </div>
-            
-            <div class="temple-block">
-                <img src="images/Toquio-Japan-Temple.jpg" alt="Tokyo Japan Temple">
-                <div class="temple-name">Tokyo Japan Temple</div>
-            </div>
-            
-            <div class="temple-block">
-                <img src="images/Paris-France-Temple.jpg" alt="Paris France Temple">
-                <div class="temple-name">Paris France Temple</div>
-            </div>
-            
-            <!-- Row 3 -->
-            <div class="temple-block">
-                <img src="images/Hong-Kong-China-Temple.jpg" alt="Hong Kong China Temple">
-                <div class="temple-name">Hong Kong China Temple</div>
-            </div>
-            
-            <div class="temple-block">
-                <img src="images/Johannesburg South-Africa-Temple.jpg" alt="Johannesburg South Africa Temple">
-                <div class="temple-name">Johannesburg South Africa Temple</div>
-            </div>
-            
-            <div class="temple-block">
-                <img src="images/Sydney-Australia-Temple.jpg" alt="Sydney Australia Temple">
-                <div class="temple-name">Sydney Australia Temple</div>
-            </div>
+        <div class="horizontal-gallery" id="templeContainer">
+            <!-- Temple cards will be dynamically inserted here -->
         </div>
     </main>
 
     <footer>
         <p>&copy; <span id="currentyear"></span> | Carlos Roberto Silva | João Pessoa</p>
+        <p id="lastModified"></p>
     </footer>
 
     <script>
-        document.getElementById('currentyear').textContent = new Date().getFullYear();
+        // Temple data array with additional information
+        const temples = [
+            {
+                templeName: "Salt Lake Temple",
+                location: "Salt Lake City, Utah, United States",
+                dedicated: "1893, April, 6",
+                area: 253000,
+                imageUrl: "images/Salt-Lake-City-Temple.jpg"
+            },
+            {
+                templeName: "Rome Italy Temple",
+                location: "Rome, Italy",
+                dedicated: "2019, March, 10",
+                area: 40000,
+                imageUrl: "images/Rome-Italy-Temple.jpg"
+            },
+            {
+                templeName: "Washington D.C. Temple",
+                location: "Kensington, Maryland, United States",
+                dedicated: "1974, November, 19",
+                area: 160000,
+                imageUrl: "images/Washington-D.C.-Temple.jpg"
+            },
+            {
+                templeName: "São Paulo Brazil Temple",
+                location: "São Paulo, Brazil",
+                dedicated: "1978, October, 30",
+                area: 59000,
+                imageUrl: "images/Sao-Paulo-Brazil-Temple.jpg"
+            },
+            {
+                templeName: "Tokyo Japan Temple",
+                location: "Tokyo, Japan",
+                dedicated: "1980, October, 27",
+                area: 52700,
+                imageUrl: "images/Toquio-Japan-Temple.jpg"
+            },
+            {
+                templeName: "Paris France Temple",
+                location: "Le Chesnay, France",
+                dedicated: "2017, May, 21",
+                area: 44000,
+                imageUrl: "images/Paris-France-Temple.jpg"
+            },
+            {
+                templeName: "Hong Kong China Temple",
+                location: "Kowloon, Hong Kong",
+                dedicated: "1996, May, 26",
+                area: 21000,
+                imageUrl: "images/Hong-Kong-China-Temple.jpg"
+            },
+            {
+                templeName: "Johannesburg South Africa Temple",
+                location: "Johannesburg, South Africa",
+                dedicated: "1985, August, 24",
+                area: 19000,
+                imageUrl: "images/Johannesburg-South-Africa-Temple.jpg"
+            },
+            {
+                templeName: "Sydney Australia Temple",
+                location: "Carlingford, New South Wales, Australia",
+                dedicated: "1984, September, 20",
+                area: 30600,
+                imageUrl: "images/Sydney-Australia-Temple.jpg"
+            },
+            // Additional temples
+            {
+                templeName: "Provo City Center Temple",
+                location: "Provo, Utah, United States",
+                dedicated: "2016, March, 20",
+                area: 85000,
+                imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/provo-city-center-temple/800x500/provo-city-center-temple-lds-866420-wallpaper.jpg"
+            },
+            {
+                templeName: "San Diego California Temple",
+                location: "San Diego, California, United States",
+                dedicated: "1993, April, 25",
+                area: 72000,
+                imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/san-diego-california/800x500/san-diego-california-temple-lds-856093-wallpaper.jpg"
+            },
+            {
+                templeName: "Nauvoo Illinois Temple",
+                location: "Nauvoo, Illinois, United States",
+                dedicated: "2002, June, 27",
+                area: 54000,
+                imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/nauvoo-illinois/800x500/nauvoo-temple-756775-wallpaper.jpg"
+            }
+        ];
+
+        // Function to display temples
+        function displayTemples(templesToDisplay = temples) {
+            const container = document.getElementById('templeContainer');
+            container.innerHTML = '';
+            
+            templesToDisplay.forEach(temple => {
+                const templeBlock = document.createElement('div');
+                templeBlock.className = 'temple-block';
+                
+                templeBlock.innerHTML = `
+                    <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy">
+                    <div class="temple-info">
+                        <div class="temple-name">${temple.templeName}</div>
+                        <div class="temple-details">
+                            <p><strong>Location:</strong> ${temple.location}</p>
+                            <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
+                            <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
+                        </div>
+                    </div>
+                `;
+                
+                container.appendChild(templeBlock);
+            });
+        }
+
+        // Filter functions
+        function filterOld() {
+            const oldTemples = temples.filter(temple => {
+                const year = parseInt(temple.dedicated.split(',')[0]);
+                return year < 1900;
+            });
+            displayTemples(oldTemples);
+        }
+
+        function filterNew() {
+            const newTemples = temples.filter(temple => {
+                const year = parseInt(temple.dedicated.split(',')[0]);
+                return year > 2000;
+            });
+            displayTemples(newTemples);
+        }
+
+        function filterLarge() {
+            const largeTemples = temples.filter(temple => temple.area > 90000);
+            displayTemples(largeTemples);
+        }
+
+        function filterSmall() {
+            const smallTemples = temples.filter(temple => temple.area < 10000);
+            displayTemples(smallTemples);
+        }
+
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', () => {
+            displayTemples();
+            
+            document.getElementById('home').addEventListener('click', () => displayTemples());
+            document.getElementById('old').addEventListener('click', filterOld);
+            document.getElementById('new').addEventListener('click', filterNew);
+            document.getElementById('large').addEventListener('click', filterLarge);
+            document.getElementById('small').addEventListener('click', filterSmall);
+            
+            // Update footer
+            document.getElementById('currentyear').textContent = new Date().getFullYear();
+            document.getElementById('lastModified').textContent = document.lastModified;
+        });
     </script>
 </body>
 </html>
