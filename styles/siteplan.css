@@ -1,0 +1,158 @@
+/* LIGHT BLUE FRAME STYLES */
+.blue-frame {
+    padding: 30px;
+    margin: 20px;
+    background-color: #e6f7ff; /* Light blue background */
+    border: 15px solid #b3e0ff; /* Thick light blue border */
+    box-shadow: 0 0 20px rgba(179, 224, 255, 0.6);
+}
+
+.page-content {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+/* BASE STYLES */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
+}
+
+h2 {
+    color: #b22222;
+    border-bottom: 2px solid #d4af37;
+    padding-bottom: 8px;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* COLOR SCHEMA */
+.color-schema {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.color-box {
+    width: 160px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 4px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* WIREFRAME STYLES */
+.wireframe-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.wireframe-view {
+    flex: 1;
+    min-width: 300px;
+}
+
+.wireframe-box {
+    border: 2px dashed #999;
+    padding: 15px;
+    background-color: #f9f9f9;
+    margin-top: 10px;
+}
+
+.mobile {
+    height: 500px;
+}
+
+.desktop {
+    height: 400px;
+}
+
+.wf-header, .wf-footer {
+    background-color: #e0e0e0;
+    padding: 12px;
+    text-align: center;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.wf-hero {
+    background-color: #eee;
+    padding: 25px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.wf-content {
+    padding: 10px;
+}
+
+.wf-card {
+    background-color: #e6e6e6;
+    padding: 15px;
+    margin: 10px 0;
+    border-left: 3px solid #b22222;
+}
+
+.wf-main {
+    display: flex;
+    margin: 10px 0;
+}
+
+.wf-left {
+    flex: 3;
+    padding-right: 15px;
+}
+
+.wf-sidebar {
+    flex: 1;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .wireframe-container {
+        flex-direction: column;
+    }
+    
+    .wf-main {
+        flex-direction: column;
+    }
+    
+    .wf-left {
+        padding-right: 0;
+    }
+    
+    .blue-frame {
+        padding: 15px;
+        border-width: 10px;
+    }
+}
