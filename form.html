@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Review Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #add8e6; /* Light blue background */
+    }
+
+    .blue-frame {
+      border: 10px solid #add8e6;
+      background-color: #fff;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    }
+
+    h1 {
+      text-align: center;
+      color: #222;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    input[type="submit"] {
+      background-color: #1a1a1a;
+      color: #fff;
+      padding: 12px 20px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #b22222;
+    }
+
+    .required {
+      color: red;
+    }
+
+    .success-message {
+      background-color: #d4edda;
+      color: #155724;
+      padding: 10px;
+      margin-top: 15px;
+      border-radius: 5px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="blue-frame">
+    <h1>Product Review</h1>
+    <form id="reviewForm" novalidate>
+      <label for="product"><span class="required">*</span> Product Name:</label>
+      <select id="product" name="product" required></select>
+
+      <label for="rating"><span class="required">*</span> Overall Rating:</label>
+      <select id="rating" name="rating" required>
+        <option value="">Select rating</option>
+        <option value="5">5 - Excellent</option>
+        <option value="4">4 - Good</option>
+        <option value="3">3 - Average</option>
+        <option value="2">2 - Poor</option>
+        <option value="1">1 - Terrible</option>
+      </select>
+
+      <label for="installDate"><span class="required">*</span> Date of Installation:</label>
+      <input type="date" id="installDate" name="installDate" required />
+
+      <label for="comments">Additional Comments:</label>
+      <textarea id="comments" name="comments" rows="4"></textarea>
+
+      <input type="submit" value="Submit Review" />
+      <div class="success-message" id="successMessage">Thank you! Your review has been submitted.</div>
+    </form>
+  </div>
+
+  <script>
+    // Product Array
+    const products = [
+      { id: 'p1', name: 'Superfoot Gloves' },
+      { id: 'p2', name: 'Kickboxing Headgear' },
+      { id: 'p3', name: 'Muay Thai Shorts' },
+      { id: 'p4', name: 'Shin Guards' }
+    ];
+
+    // Populate product select
+    const productSelect = document.getElementById('product');
+    productSelect.innerHTML = '<option value="">Select a product</option>';
+    products.forEach(product => {
+      const option = document.createElement('option');
+      option.value = product.id;
+      option.textContent = product.name;
+      productSelect.appendChild(option);
+    });
+
+    // Form submission with localStorage
+    const form = document.getElementById('reviewForm');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      if (form.checkValidity()) {
+        let reviewCount = localStorage.getItem('reviewCount');
+        reviewCount = reviewCount ? parseInt(reviewCount) + 1 : 1;
+        localStorage.setItem('reviewCount', reviewCount);
+        successMessage.style.display = 'block';
+        form.reset();
+      } else {
+        form.reportValidity();
+      }
+    });
+  </script>
+</body>
+</html>
