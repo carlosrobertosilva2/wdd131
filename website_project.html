@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The legacy of Bill Wallace, undefeated kickboxing champion">
+    <title>Bill Wallace - The Kickboxing Legend</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #add8e6; /* Light blue background */
+            font-family: 'Roboto', sans-serif;
+            text-align: center; /* Centralizes all text */
+        }
+
+        .blue-frame {
+            border: 10px solid #add8e6; /* Light blue frame */
+            background-color: white; /* White content inside */
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .hero img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .stats-grid {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        footer {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="blue-frame">
+        <header>
+            <h1>Bill "Superfoot" Wallace</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="biography.html">Biography</a></li>
+                    <li><a href="techniques.html">Techniques</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <img src="images/wallace-hero.jpg" alt="Bill Wallace in fighting stance" loading="lazy">
+                <div class="hero-text">
+                    <h2>The Undefeated Champion</h2>
+                    <p>23-0 professional record with 13 knockouts</p>
+                </div>
+            </section>
+
+            <section class="highlights">
+                <h2>Career Highlights</h2>
+                <div class="stats-grid" id="stats-container">
+                    <!-- Filled by JavaScript -->
+                </div>
+            </section>
+
+            <section class="quote">
+                <blockquote>
+                    "Speed is the key to my success. Not strength, not power, but speed."
+                    <cite>- Bill Wallace</cite>
+                </blockquote>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 Bill Wallace Legacy Project</p>
+            <p><a href="references.html">References</a></p>
+        </footer>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
