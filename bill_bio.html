@@ -9,23 +9,29 @@
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
             margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
+            padding: 20px;
+            background-color: #e6f2ff; /* Light blue background */
             color: #333;
+        }
+        
+        .page-frame {
+            border: 15px solid #b3d9ff; /* Light blue frame */
+            border-radius: 10px;
+            background-color: white;
+            overflow: hidden;
         }
         
         .container {
             max-width: 900px;
             margin: 0 auto;
             padding: 20px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         
         header {
             text-align: center;
             padding: 20px 0;
             border-bottom: 2px solid #c00;
+            background-color: #f5f5f5;
         }
         
         h1 {
@@ -44,6 +50,7 @@
             flex-wrap: wrap;
             gap: 30px;
             margin-top: 30px;
+            padding: 0 15px;
         }
         
         .image-container {
@@ -61,6 +68,7 @@
             height: auto;
             border-radius: 5px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            border: 1px solid #ddd;
         }
         
         p {
@@ -71,42 +79,53 @@
         footer {
             text-align: center;
             margin-top: 30px;
-            padding-top: 20px;
+            padding: 20px;
             border-top: 1px solid #ddd;
             color: #666;
+            background-color: #f5f5f5;
         }
         
         @media (max-width: 768px) {
             .content {
                 flex-direction: column;
             }
+            
+            body {
+                padding: 10px;
+            }
+            
+            .page-frame {
+                border-width: 10px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Bill "Superfoot" Wallace</h1>
-            <div class="subtitle">The Undefeated Kickboxing Champion</div>
-        </header>
-        
-        <div class="content">
-            <div class="image-container">
-                <img src="https://www.blackbeltmag.com/media-library/bill-wallace-superfoot.jpg?id=32672576&width=1200&height=800&quality=90&coordinates=0%2C0%2C0%2C0" alt="Bill 'Superfoot' Wallace in fighting stance">
+    <div class="page-frame">
+        <div class="container">
+            <header>
+                <h1>Bill "Superfoot" Wallace</h1>
+                <div class="subtitle">The Undefeated Kickboxing Champion</div>
+            </header>
+            
+            <div class="content">
+                <div class="image-container">
+                    <img src="https://www.blackbeltmag.com/media-library/bill-wallace-superfoot.jpg?id=32672576&width=1200&height=800&quality=90&coordinates=0%2C0%2C0%2C0" alt="Bill 'Superfoot' Wallace in fighting stance">
+                </div>
+                
+                <div class="bio-container">
+                    <p>Bill "Superfoot" Wallace is one of the most legendary figures in martial arts history. 
+                    Known for his incredible speed and undefeated professional kickboxing record (23-0, 13 KOs), Wallace dominated the sport in the 1970s as the PKA Middleweight Champion for nearly six years. His fighting style became iconic after a Judo injury forced him to rely almost entirely on his left leg, he developed devastating kicks that clocked an astonishing 60 mph. Beyond his competitive career, Wallace made significant contributions to martial arts as an educator, earning a master's degree in Kinesiology and authoring multiple instructional books. He also appeared in films alongside stars like Chuck Norris and Jackie Chan while training celebrities, including Elvis Presley.</p>
+                    
+                    <p>Wallace's legacy extends far beyond his fighting career. 
+                    As a respected teacher and innovator, he developed the "Superfoot System" and taught seminars worldwide, inspiring generations of martial artists. His authenticity and skill earned him roles as a UFC commentator and film actor, bridging the gap between competitive fighting and mainstream recognition. Tragically, Wallace was the personal trainer who discovered John Belushi after his fatal overdose, adding a somber note to his remarkable life story. Today, Wallace remains a celebrated figure in martial arts, a true champion whose influence continues through his teachings, writings, and unforgettable impact on the sport.</p>
+                </div>
             </div>
             
-            <div class="bio-container">
-                <p>Bill "Superfoot" Wallace is one of the most legendary figures in martial arts history. 
-                Known for his incredible speed and undefeated professional kickboxing record (23-0, 13 KOs), Wallace dominated the sport in the 1970s as the PKA Middleweight Champion for nearly six years. His fighting style became iconic after a Judo injury forced him to rely almost entirely on his left leg, he developed devastating kicks that clocked an astonishing 60 mph. Beyond his competitive career, Wallace made significant contributions to martial arts as an educator, earning a master's degree in Kinesiology and authoring multiple instructional books. He also appeared in films alongside stars like Chuck Norris and Jackie Chan while training celebrities, including Elvis Presley.</p>
-                
-                <p>Wallace's legacy extends far beyond his fighting career. 
-                As a respected teacher and innovator, he developed the "Superfoot System" and taught seminars worldwide, inspiring generations of martial artists. His authenticity and skill earned him roles as a UFC commentator and film actor, bridging the gap between competitive fighting and mainstream recognition. Tragically, Wallace was the personal trainer who discovered John Belushi after his fatal overdose, adding a somber note to his remarkable life story. Today, Wallace remains a celebrated figure in martial arts, a true champion whose influence continues through his teachings, writings, and unforgettable impact on the sport.</p>
-            </div>
+            <footer>
+                <p>&copy; 2025 Martial Arts History | Tribute to Bill Wallace</p>
+            </footer>
         </div>
-        
-        <footer>
-            <p>&copy; 2023 Martial Arts History | Tribute to Bill Wallace</p>
-        </footer>
     </div>
 </body>
 </html>
